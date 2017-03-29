@@ -2,4 +2,4 @@
 
 avahi_packages:
   pkg.installed:
-    - pks: {{ avahi.pkgs }}
+    - pkgs: {{ avahi.pkgs }}

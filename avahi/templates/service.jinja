@@ -1,15 +1,15 @@
 <?xml version="1.0" standalone='no'?>
 <!DOCTYPE service-group SYSTEM "avahi-service.dtd">
 <service-group>
- <name replace-wildcards="yes">{{defaults.name}}</name>
+ <name replace-wildcards="yes">{{service_name}}</name>
  <service>
-   <type>_{{defaults.name}}._tcp</type>
-   <port>{{defaults.port}}</port>
+   <type>_{{service_type}}._tcp</type>
+   <port>{{service_port}}</port>
  </service>
  <service>
    <type>_device-info._tcp</type>
    <port>0</port>
-   <txt-record>model={{defaults.model}}</txt-record>
+   <txt-record>model={{service_model}}</txt-record>
  </service>
 </service-group>
 
