@@ -3,9 +3,9 @@
 {% set services = salt['pillar.get']('avahi:services', {}) %}
 
 {%- for service, params in services.items() %}
-avahi_services_{{service}}:
+avahi_service_{{service}}:
   file.managed:
-    - name: {{ avahi.services_dir + '/' + service|lower + '.conf' }}
+    - name: {{avahi.services_dir}}/{{service|lower}}.conf
     - source: salt://avahi/templates/service.jinja
     - template: jinja
     - user: root
