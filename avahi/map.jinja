@@ -3,16 +3,19 @@
     'pkgs'    : ['avahi-daemon','avahi-discover','libnss-mdns'],
     'service' : 'avahi-daemon',
     'config'  : '/etc/avahi/avahi-daemon.conf',
+    'services_dir': '/etc/avahi/services',
   },
   'RedHat' : {
     'pkgs'    : ['avahi','avahi-autoipd','avahi-compat-libdns_sd','avahi-glib','avahi-gobject','avahi-tools','nss-mdns','nss-mdns.i?86'],
     'service' : 'avahi-daemon',
     'config'  : '/etc/avahi/avahi-daemon.conf',
+    'services_dir': '/etc/avahi/services',
   },
   'Arch' : {
     'pkgs'    : ['avahi', 'nss-mdns'],
     'service' : 'avahi-daemon',
     'config'  : '/etc/avahi/avahi-daemon.conf',
+    'services_dir': '/etc/avahi/services',
   },
 },  merge=salt['pillar.get']('avahi:lookup')) %}
 
