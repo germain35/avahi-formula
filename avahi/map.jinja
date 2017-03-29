@@ -17,5 +17,5 @@
     'config'  : '/etc/avahi/avahi-daemon.conf',
     'services_dir': '/etc/avahi/services',
   },
-},  merge=salt['pillar.get']('avahi:lookup')) %}
+}, grain='os', merge=salt['pillar.get']('avahi:lookup'), default='Debian') %}
 
