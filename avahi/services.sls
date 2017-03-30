@@ -9,7 +9,7 @@ include:
 {%- for service, params in services.items() %}
 avahi_services_{{service}}:
   file.managed:
-    - name: {{avahi.services_dir}}/{{service|lower}}.conf
+    - name: {{avahi.services_dir}}/{{service|lower}}.service
     - source: salt://avahi/templates/service.jinja
     - template: jinja
     - user: root
